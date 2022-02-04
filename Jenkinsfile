@@ -1,11 +1,4 @@
 pipeline {
-  properties([
-    parameters([
-        choice(choices: 'sprint_6\nsprint_7\nsprint_8\nSprint_9', description: 'Select branch to Build', name: 'Branch'),
-        choice(choices: 'No\nYes', , name: 'choice2'),
-        choice(choices: 'No\nYes', name: 'choice3')
-    ])
-  ])
 
   agent {
     docker {
