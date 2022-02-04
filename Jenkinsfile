@@ -1,7 +1,5 @@
 pipeline {
-  parameters {
-    string(name: 'MY_PARAM', defaultValue: '', description: 'My parameter')
-  }
+properties([parameters([text(defaultValue: 'TEST', name: 'TEST')])])
   agent {
     docker {
       image 'node:16.13.0-alpine'
